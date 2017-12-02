@@ -16,12 +16,6 @@ def test_assert_that_5_returns_a_nickel
 	assert_equal({:nickel => 1}, coin_checker(change))
 end
 
-# def test_assert_that_dime_is_10_and_quarter_is_25
-# 	value = 10
-# 	value = 25
-# 	assert_equal(["dime", "quarter"], multicoin_return(value))
-# end
-
 
 
 end
