@@ -6,21 +6,21 @@ def test_assert_that_1_is_1
 	assert_equal(1, 1)
 end
 
-def test_assert_that_penny_is_1
-	value = 1
-	assert_equal("penny", coin_checker(value))
+def test_assert_that_1_returns_penny
+	change = 1
+	assert_equal({:penny => 1}, coin_checker(change))
 end
 
-def test_assert_that_nickel_is_5
-	value = 5
-	assert_equal("nickel", coin_checker(value))
+def test_assert_that_5_returns_a_nickel
+	change = 5
+	assert_equal({:nickel => 1}, coin_checker(change))
 end
 
-def test_assert_that_dime_is_10_and_quarter_is_25
-	value = 10
-	value = 25
-	assert_equal(["dime", "quarter"], multicoin_return(value))
-end
+# def test_assert_that_dime_is_10_and_quarter_is_25
+# 	value = 10
+# 	value = 25
+# 	assert_equal(["dime", "quarter"], multicoin_return(value))
+# end
 
 
 

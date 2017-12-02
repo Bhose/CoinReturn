@@ -1,16 +1,17 @@
 
 
-def coin_checker(value)
-	coin_value = {"penny" => 1, "nickel" => 5, "dime" => 10, "quarter" =>25}
-	coin_value.key(value)
-	
+def coin_checker(change)
+	coin_value = {}
+	if change > 0
+	coin_value[:penny] = change
+	end
+	coin_value
 end
 
-def multicoin_return(value)
-	return ["dime", "quarter"]
-	puts "return 1: #{a}"
-	puts "return 2: #{b}"
-end
+
+
+	# coin_value = {"penny" => 1, "nickel" => 5, "dime" => 10, "quarter" =>25}
+
 
 
 
