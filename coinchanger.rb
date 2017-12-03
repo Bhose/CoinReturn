@@ -1,29 +1,46 @@
 def coin_checker(change)
 	coin = {}
-
-	if change > 99
-		coin[:dollar] = change / 100
-		change = change % 100
+	value = {:dollar => 100, :quarter => 25, :dime => 10, :nickel => 5, :penny => 1}
+	value.each do |money, amount|
+		if change >= amount
+			coin[money] = change / amount
+			change = change % amount
+		end
 	end
+	coin
+end
 
-	if change > 24 
-		coin[:quarter] = change / 25
-		change = change % 25
-	end
 
-	if change > 9 
-		coin[:dime] = change / 10
-		change = change % 10
-	end
 
-	if change > 4 && change < 10
-		coin[:nickel] = change / 5
-		change = change % 5
-	end
+# 	if change > 99
+# 		coin[:dollar] = change / 100
+# 		change = change % 100
+# 	end
 
-	if change > 0
-				coin[:penny] = change
-			end
+# 	if change > 24 
+# 		coin[:quarter] = change / 25
+# 		change = change % 25
+# 	end
+
+# 	if change > 9 
+# 		coin[:dime] = change / 10
+# 		change = change % 10
+# 	end
+
+# 	if change > 4 && change < 10
+# 		coin[:nickel] = change / 5
+# 		change = change % 5
+# 	end
+
+# 	if change > 0
+# 		coin[:penny] = change
+# 	end
+# coin 
+# end
+
+	
+
+	#VV the hard way
 
 	# if change > 0 && change < 5
 	# 	coin[:penny] = change
@@ -60,17 +77,3 @@ def coin_checker(change)
 	# 		coin[:penny] = change
 	# 	end
 	# end
-coin 
-end
-
-
-
-
-
-
-	# coin_value = {"penny" => 1, "nickel" => 5, "dime" => 10, "quarter" =>25}
-
-
-
-
-	
