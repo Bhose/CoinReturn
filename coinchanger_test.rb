@@ -41,5 +41,14 @@ def test_assert_that_50_returns_2_quarters
 	assert_equal({:quarter => 2}, coin_checker(change))
 end
 
+def test_assert_that_63_returns_correct_change
+	change = 63
+	assert_equal({:quarter => 2, :dime => 1, :penny => 3}, coin_checker(change))
+end
+
+ def test_assert_that_100_returns_dollar
+ 	change = 100
+ 	assert_equal({:dollar => 1}, coin_checker(change))
+ end
 
 end
