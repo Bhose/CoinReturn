@@ -1,5 +1,3 @@
-
-
 def coin_checker(change)
 	coin = {}
 	if change > 0 && change < 5

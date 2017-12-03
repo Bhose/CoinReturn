@@ -21,6 +21,11 @@ def test_assert_that_9_returns_a_nickel_and_4_pennies
 	assert_equal({:nickel => 1, :penny => 4}, coin_checker(change))
 end
 
+def test_assert_that_10_returns_dime
+	change = 10
+	assert_equal({:dime => 1}, coin_checker(change))
+end
+
 
 
 end
