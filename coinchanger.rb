@@ -25,14 +25,14 @@ def coin_checker(change)
 	elsif change > 24 
 		coin[:quarter] = change / 25
 		change = change % 25
-		if change > 9
-			coin [:dime] = change / 10
-			change = change % 10
+		if change > 0 && change < 4
+			coin[:penny] = change
 			if change > 4 
-				coin[:nickel] = change / 5
-				change = change % 5
-				if change > 0 && change < 4
-					coin[:penny] = change
+					coin[:nickel] = change / 5
+					change = change % 5
+				if change > 9
+					coin [:dime] = change / 10
+					change = change % 10
 				end
 			end
 		end
